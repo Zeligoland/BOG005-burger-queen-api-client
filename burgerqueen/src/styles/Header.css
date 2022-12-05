@@ -1,0 +1,32 @@
+.BQLogo-container {
+    margin: auto;  
+    display: flex;       
+    justify-content: space-around;
+  }
+
+  
+  .BQLogo-container  .burger-queen-logo {   
+      width: 40%;    
+      display: flex;
+  }
+
+
+.tittleOrders h1 {
+    font-size: 15px;
+    text-align: center;
+    line-height: 12px;
+    font-family: 'RocknRoll One', sans-serif;
+    color: #572950;
+    margin-top: 70px;
+}
+
+.contP {
+    margin-top: 70px;
+    font-size: 10px;
+    text-align: center;
+}
+
+ .buttonLogout {
+    background-color: #A3586D;    
+} 
+
