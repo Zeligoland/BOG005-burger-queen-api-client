@@ -1,4 +1,4 @@
-import "../styles/login.css";
+import "../styles/Login.css";
 import logoImg from "../assets/burger-queen-logo.png";
 
 export function Login() {
