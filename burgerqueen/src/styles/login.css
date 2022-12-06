@@ -3,7 +3,9 @@
     font-family: 'RocknRoll One', sans-serif;
 }
 
-
+#root {
+    background: linear-gradient(180deg, #F46A4E 0%, rgba(243, 176, 90, 0) 83.85%);
+}
 
 .welcomeHeader {
     display: flex;
