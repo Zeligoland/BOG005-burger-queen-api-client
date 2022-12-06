@@ -6,9 +6,10 @@
 
   
   .BQLogo-container  .burger-queen-logo {   
-      width: 40%;    
-      display: flex;
-  }
+     width: 40%;    
+     display: flex;
+     margin-top: 0px ;
+  } 
 
 
 .tittleOrders h1 {
