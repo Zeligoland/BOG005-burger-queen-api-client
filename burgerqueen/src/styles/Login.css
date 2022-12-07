@@ -45,11 +45,25 @@
 .loginBox {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.userEmail {
+    width: 20%;
+    margin: 10px;
+    left: 185px;
+    top: 707px;
+}
+
+.userPassword {
+    width: 200px;
 }
 
 .signIn {
     font-size: 24px;    width: 322px;
     height: 78px;
+    margin-top: 140px;
+    margin-left: 110px;    
     box-sizing: border-box;
     background: #A3586D;
     border: 1px solid rgba(2, 69, 122, 0.5);
