@@ -31,52 +31,38 @@
     border-radius: 20px;
 }
 
-.bqApp {
-    font-size: 25px;
-    margin: 60px 0 20px 0;
-}
-
-.bqApp, .authUser {
-    margin-left: 20px;
+.welcome, .bqApp, .authUser {
     color: #572950;
-}
-
-.authUser {
-    font-size: 16px;
 }
 
 .welcome {
-    color: #572950;
     margin-top: -75px;
     font-size: 30px;
     line-height: 43px;
     text-align: center;
 }
 
-.formLogin {
+.loginBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.userEmail,
-.userPass {
-    font-size: 24px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #000000;
-    margin-left: 20px;
-    width: 476px;
-    height: 50px;
-    margin-top: 28px;
+.userEmail {
+    width: 20%;
+    margin: 10px;
+    left: 185px;
+    top: 707px;
+}
+
+.userPassword {
+    width: 200px;
 }
 
 .signIn {
-    color: white;
-    font-size: 24px;    
-    width: 322px;
+    font-size: 24px;    width: 322px;
     height: 78px;
-    margin-top: 76px;
+    margin-top: 140px;
     margin-left: 110px;    
     box-sizing: border-box;
     background: #A3586D;
