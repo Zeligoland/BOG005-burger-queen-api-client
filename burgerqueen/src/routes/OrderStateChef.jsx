@@ -1,6 +1,11 @@
+import Header from "../components/Header";
+
 export function OrderStateChef() {
 
-    return (  
-      <h1>OrderStateChef</h1>
-    );
-  }
+  return (  
+    <div>
+    <Header/>
+    <h1>OrderStateChef</h1>
+    </div>
+  );
+}

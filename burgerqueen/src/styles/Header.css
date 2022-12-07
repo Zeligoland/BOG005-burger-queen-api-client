@@ -2,29 +2,37 @@
     margin: auto;  
     display: flex;       
     justify-content: space-around;
+    align-items: center;
   }
 
   
   .BQLogo-container  .burger-queen-logo {   
-     width: 40%;    
+     width: 30%;    
      display: flex;
-     margin-top: 0px ;
+     margin-top: 20px ;
   } 
 
+.tittleOrders {
+    margin-top: 8%;
+  }
 
 .tittleOrders h1 {
-    font-size: 15px;
-    text-align: center;
+    font-size: 15px;    
     line-height: 12px;
     font-family: 'RocknRoll One', sans-serif;
-    color: #572950;
-    margin-top: 70px;
+    color: #572950;    
 }
 
-.contP {
-    margin-top: 70px;
-    font-size: 10px;
-    text-align: center;
+.contP {       
+    font-size: 12px;    
+    font-family: 'RocknRoll One', sans-serif;
+    color: #572950; 
+    margin-top: 8%;   
+    margin-right: 3%;
+}
+
+.contP p {       
+    margin-top: 20px;
 }
 
  .buttonLogout {

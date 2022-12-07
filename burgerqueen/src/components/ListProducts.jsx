@@ -9,7 +9,7 @@ function ListProducts ({ product, clickAdd }) {
             <img src={product.image} alt={product.name} />
             <p>{product.name}</p>
             <p>${product.price}</p>
-            <ButtonAll  text='agregar' className='btnAdd' onClick={() => clickAdd(product)} />
+            <ButtonAll  text='Agregar' className='btnAdd' onClick={() => clickAdd(product)} />
         </div>
     )
 }

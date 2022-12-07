@@ -1,77 +1,59 @@
-
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
+import { getProducts } from "../helpers/axios";
+import ListProducts from "../components/ListProducts";
 
 
 export function MenuOptions() {
+  const [productsOptions, setProductsOptions] = useState([]);
+  const [orderList, setOrderList] = useState([]);
+  const [productsList, setProductsList] = useState([]);
 
- 
+  useEffect(() => {
+    const getProductsOption = async () => {
+      const result = await getProducts();
+      setProductsOptions(result);
+    };
+
+    getProductsOption();
+  }, [orderList]);
+
+  const selectOption = (e) => {
+    const resultFilter = productsOptions.filter((product) => {
+      if (e.target.value === product.type) {
+        return true;
+      }
+      return false;
+    });
+    setProductsList(resultFilter);
+  };
+
   return (
-    <div>     
-      <Header/>
+    <div>
+      <Header />
       <section className="options-container">
-        <section 
-          className= "optionsListContainer">
-          <select className="optionMenu">
+        <section className="optionsListContainer">
+          <select className="optionMenu" onChange={selectOption}>
             <option value="Seleccione Desayuno/Almuerzo y Cena">
               Seleccione una opción
             </option>
             <option value="Desayuno">Desayuno</option>
             <option value="Almuerzo">Almuerzo y Cena</option>
-          </select> 
-                           
+          </select>
+          {productsList.map((product, id) => {
+            return (
+              <div key={id} className="listProductsOrder">
+                <ListProducts
+                  product={product}
+                  dataEntry={new Date()}                  
+                ></ListProducts>
+              </div>
+            );
+          })}
         </section>
-      </section>    
-    </div>
-  );
-} 
-
-
-/* export function MenuOptions() {
-  const navigate = useNavigate();
-  return (
-    <div>     
-      <Header/>
-      <div className="options-container">
-        <section 
-          className="options-block"
-          onClick={() => navigate(Products)}
-        >
-          <h3>Desayuno</h3>
-        </section>
-        <section
-          className="options-block"
-          onClick={() => navigate(Products)}
-        >
-          <h3>Almuerzo y Cena</h3>
-        </section>
-        <section
-          className="options-block"
-          onClick={() => navigate(OrderState)}
-        >
-          <h3>Pedido</h3>
-        </section>
-      </div>
-
-      <section className="breakfastMenu">
-        <button className="botonBreakfas">Café americano</button>
-        <button className="botonBreakfas">Café con leche</button>
-        <button className="botonBreakfas">Sandwich de jampon y queso</button>
-        <button className="botonBreakfas">Jugo de frutas natural</button>
-      </section>
-
-      <section className="lunchDinnerMenu">
-        <h5>Hamburguesas</h5>
-        <button className="botonLunchDinner">Hamburguesa simple</button>
-        <button className="botonLunchDinner">Hamburguesa doble</button>
-        <h5>Acompañamientos</h5>
-        <button className="botonLunchDinner">Papas fritas</button>
-        <button className="botonLunchDinner">Aros de cebolla</button>
-        <h5>Para tomar</h5>
-        <button className="botonLunchDinner">Agua 500ml</button>
-        <button className="botonLunchDinner">Agua 700ml</button>
-        <button className="botonLunchDinner">Bebida/gaseosa 500ml</button>
-        <button className="botonLunchDinner">Bebida/gaseosa 700ml</button>
       </section>
     </div>
   );
-}  */
+}
+
+
