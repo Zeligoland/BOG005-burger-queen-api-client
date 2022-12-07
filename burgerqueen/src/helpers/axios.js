@@ -1,5 +1,17 @@
 import axios from "axios";
 
+export const getProducts = async () => {
+    const res = await axios({
+        method: 'GET',
+        url: baseUrl + '/products',
+        headers: {
+            'content-type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+    });
+    return res.data
+};
+
 const baseUrl = 'http://localhost:8080';
 let token = localStorage.getItem('tokenUser')
 let userId = localStorage.getItem('userId')
