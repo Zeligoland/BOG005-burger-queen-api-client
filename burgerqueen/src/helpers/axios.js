@@ -19,8 +19,20 @@ export const loginUsers = async (email, password) => {
     userId = rest.data.user.id
     localStorage.setItem('userRole', rest.data.user.role)
     localStorage.setItem('userEmail', rest.data.user.email)
-    return rest 
-  
+    return rest   
 }
+
+export const getProducts = async () => {
+
+    const res = await axios({
+        method: 'GET',
+        url: baseUrl + '/products',
+        headers: {
+            'content-type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+    });
+    return res.data
+};
 
  

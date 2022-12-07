@@ -31,11 +31,9 @@
     margin-right: 3%;
 }
 
-.contP p {       
-    margin-top: 20px;
-}
 
  .buttonLogout {
-    background-color: #A3586D;    
+    background-color: #A3586D;
+    color: white;    
 } 
 
