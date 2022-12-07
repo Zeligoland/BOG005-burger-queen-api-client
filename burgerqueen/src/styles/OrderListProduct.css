@@ -1,0 +1,53 @@
+.optionMenu {
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+}
+
+.optionsListContainer {
+    padding-left: 5px;
+    width: 98%;    
+    text-align: center;
+}
+
+.optionsListContainer select {
+    background-color: #FBF1D7;
+    border-radius: 15px;
+    border-style: none;
+    margin-bottom: 10px;
+}
+
+.optionsListContainer option {
+    font-weight: bold;
+}
+
+.listProductsContainer {
+    margin-top: 30px;
+    width: 100%;
+    min-height: 70px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 10% 30% 15% 20%;
+    justify-content: space-around;
+    align-items: center;
+    background: #F3B05A;    
+    border-radius: 20px;   
+}
+
+.listProductsContainer img {
+    height: 50px;    
+    margin: 20%;
+}
+
+.listProductsContainer p {
+    font-size: 14px;
+    align-items: center;    
+}
+
+.listProductsContainer .btnAdd {
+    font-size: 12px;
+    background: #5C4A72;
+    width: 80px;    
+    border-radius: 15px;
+    border-style: none;
+}
