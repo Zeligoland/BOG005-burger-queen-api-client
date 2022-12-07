@@ -1,3 +1,4 @@
+import "../styles/Login.css";
 
 import logoImg from "../assets/burger-queen-logo.png";
 import { useNavigate } from "react-router";
