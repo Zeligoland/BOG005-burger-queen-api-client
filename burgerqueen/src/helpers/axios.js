@@ -23,16 +23,4 @@ export const loginUsers = async (email, password) => {
   
 }
 
-export const getProducts = async () => {
-    const res = await axios({
-        method: 'GET',
-        url: baseUrl + '/products',
-        headers: {
-            'content-type': 'application/json',
-            'Authorization': 'Bearer ' + token,
-        },
-    });
-    return res.data
-};
-
  
