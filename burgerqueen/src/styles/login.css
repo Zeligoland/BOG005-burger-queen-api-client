@@ -31,6 +31,10 @@
     border-radius: 20px;
 }
 
+.bqApp {
+    margin: 20px 0 20px 0;
+}
+
 .welcome, .bqApp, .authUser {
     color: #572950;
 }
@@ -42,7 +46,7 @@
     text-align: center;
 }
 
-.loginBox {
+.formLogin {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,19 +54,19 @@
 
 .userEmail {
     width: 20%;
-    margin: 10px;
-    left: 185px;
-    top: 707px;
+    margin-top: 28px;
+    margin-top: 28px;
+
 }
 
 .userPassword {
-    width: 200px;
+    margin-top: 16px;
 }
 
 .signIn {
     font-size: 24px;    width: 322px;
     height: 78px;
-    margin-top: 140px;
+    margin-top: 40px;
     margin-left: 110px;    
     box-sizing: border-box;
     background: #A3586D;
