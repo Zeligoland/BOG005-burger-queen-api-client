@@ -1,17 +1,5 @@
 import axios from "axios";
 
-export const getProducts = async () => {
-    const res = await axios({
-        method: 'GET',
-        url: baseUrl + '/products',
-        headers: {
-            'content-type': 'application/json',
-            'Authorization': 'Bearer ' + token,
-        },
-    });
-    return res.data
-};
-
 const baseUrl = 'http://localhost:8080';
 let token = localStorage.getItem('tokenUser')
 let userId = localStorage.getItem('userId')
@@ -31,9 +19,21 @@ export const loginUsers = async (email, password) => {
     userId = rest.data.user.id
     localStorage.setItem('userRole', rest.data.user.role)
     localStorage.setItem('userEmail', rest.data.user.email)
-    return rest 
-  
+    return rest   
 }
+
+export const getProducts = async () => {
+
+    const res = await axios({
+        method: 'GET',
+        url: baseUrl + '/products',
+        headers: {
+            'content-type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+    });
+    return res.data
+};
 
 export const orderPetition = async (objectProducts, client) => {
     const res = await axios({
@@ -52,6 +52,59 @@ export const orderPetition = async (objectProducts, client) => {
         }
     });
     return res.status
-    };
+};
 
- 
+export const viewOrderPending = async () => {
+    const res = await axios({
+        method: 'GET',
+        url: baseUrl + '/orders',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        }
+    });
+    return res.data
+};
+
+export const changeOrderToDelivering = async (orderId) => {
+    const res = await axios({
+        method: 'PATCH',
+        url: baseUrl + '/orders/' + orderId,
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+        data: {
+            status: 'delivering',
+            dateProcessed: new Date().toLocaleString('sv'),
+        }
+    });
+    return res
+};
+
+export const changeOrderToDelivered = async (orderId) => {
+    const res = await axios({
+        method: 'PATCH',
+        url: baseUrl + '/orders/' + orderId,
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+        data: {
+            status: 'delivered',
+        }
+    });
+    return res
+};
+
+export const deleteOrderPending = async (orderId) => {
+    const res = await axios({
+        method: 'DELETE',
+        url: baseUrl + '/orders/' + orderId,
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        }
+    });
+    return res
+};

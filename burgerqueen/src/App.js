@@ -12,7 +12,7 @@ import './/styles/Header.css';
 import './/styles/MenuOptions.css';
 import './/styles/Login.css';
 import './/styles/OrderListProduct.css';
-
+import './/styles/OrderState.css';
 
 function App () { 
 
@@ -38,10 +38,7 @@ export default App;
 
 
 /* import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import './/styles/Login.css';
-import './/styles/Header.css';
-import './/styles/MenuOptions.css';
-import './/styles/OrderListProduct.css';
+
 import './/styles/ProductCardListProduct.css';
 import './/styles/Administration.css';
 import './/styles/OrderState.css';

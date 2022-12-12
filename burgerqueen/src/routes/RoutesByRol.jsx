@@ -22,13 +22,13 @@ function RoutesByRole() {
           <Route path="/products" element={<Products />}></Route>
         </Routes>
       ) : null}
-      {userActived === "Mesero" ? (
+      {userActived === "mesero" ? (
         <Routes>
           <Route path="/menuOptions" element={<MenuOptions />}></Route>
           <Route path="/orderState" element={<OrderState />}></Route>
         </Routes>
       ) : null}
-      {userActived === "Chef" ? (
+      {userActived === "chef" ? (
         <Routes>
           <Route path="/orderStateChef" element={<OrderStateChef />}></Route>
         </Routes>
@@ -38,23 +38,3 @@ function RoutesByRole() {
 }
 
 export default RoutesByRole; 
-
-/*function RoutesByRole () { 
-
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/admin" element={<Administration />}></Route>
-          <Route path="/menuOptions" element={<MenuOptions />}></Route>
-          <Route path="/orderState" element={<OrderState />}></Route>
-          <Route path="/users" element={<Users />}></Route>
-          <Route path="/products" element={<Products />}></Route>
-          <Route path="/orderStateChef" element={<OrderStateChef />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </div>  
-  );
-}
-
-export default RoutesByRole; */

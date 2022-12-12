@@ -15,14 +15,13 @@ const Header = () => {
 
   return (
     <section className="getInto-container">
-      <figure className="BQLogo-container">
-      <img src={logo} className="burger-queen-logo" alt="logo" />
-      <TittleOrders />
-      </figure>
-
       <ButtonAll className="buttonLogout" type="button" onClick={logOut}>
         <FontAwesomeIcon className="iconSignOut" icon={faRightFromBracket} />
       </ButtonAll>
+      <figure className="BQLogo-container">
+      <img src={logo} className="burger-queen-logo" alt="logo" />
+      <TittleOrders />
+      </figure>      
     </section>
   );
 };
