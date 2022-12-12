@@ -35,4 +35,77 @@ export const getProducts = async () => {
     return res.data
 };
 
+export const orderPetition = async (objectProducts, client) => {
+    const res = await axios({
+        method: 'POST',
+        url: baseUrl + '/orders',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+        data: {
+            userId: userId,
+            client: client,
+            products: objectProducts,
+            status: 'pending',
+            dataEntry: new Date().toLocaleString('sv')
+        }
+    });
+    return res.status
+};
+
+export const viewOrderPending = async () => {
+    const res = await axios({
+        method: 'GET',
+        url: baseUrl + '/orders',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        }
+    });
+    return res.data
+};
+
+export const changeOrderToDelivering = async (orderId) => {
+    const res = await axios({
+        method: 'PATCH',
+        url: baseUrl + '/orders/' + orderId,
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+        data: {
+            status: 'delivering',
+            dateProcessed: new Date().toLocaleString('sv'),
+        }
+    });
+    return res
+};
+
+export const changeOrderToDelivered = async (orderId) => {
+    const res = await axios({
+        method: 'PATCH',
+        url: baseUrl + '/orders/' + orderId,
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+        data: {
+            status: 'delivered',
+        }
+    });
+    return res
+};
+
+export const deleteOrderPending = async (orderId) => {
+    const res = await axios({
+        method: 'DELETE',
+        url: baseUrl + '/orders/' + orderId,
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        }
+    });
+    return res
+};
  

@@ -1,8 +1,12 @@
-.BQLogo-container {
-    margin: auto;  
+* { 
+  font-family: 'RocknRoll One', sans-serif;
+}
+
+.BQLogo-container {    
     display: flex;       
     justify-content: space-around;
     align-items: center;
+    margin-top: -40px;
   }
 
   
@@ -18,14 +22,12 @@
 
 .tittleOrders h1 {
     font-size: 15px;    
-    line-height: 12px;
-    font-family: 'RocknRoll One', sans-serif;
+    line-height: 12px;    
     color: #572950;    
 }
 
 .contP {       
-    font-size: 12px;    
-    font-family: 'RocknRoll One', sans-serif;
+    font-size: 14px;        
     color: #572950; 
     margin-top: 8%;   
     margin-right: 3%;
@@ -34,6 +36,12 @@
 
  .buttonLogout {
     background-color: #A3586D;
-    color: white;    
+    color: white;   
+    border-style: none; 
+    margin-left: 92%;
+    margin-top: 3%;
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
 } 
 
