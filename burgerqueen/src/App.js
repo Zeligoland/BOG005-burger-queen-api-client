@@ -5,8 +5,8 @@ import { Administration } from "./routes/Administration";
 import { MenuOptions } from "./routes/MenuOptions";
 import { OrderState } from  "./routes/OrderState";
 import { OrderStateChef } from "./routes/OrderStateChef";
-import { Products } from "./routes/Products";
-import { Users } from "./routes/Users";
+import { Products } from "./routes/EditAdminProducts";
+import { Users } from "./routes/EditAdminUsers";
 
 import './/styles/Header.css';
 import './/styles/MenuOptions.css';

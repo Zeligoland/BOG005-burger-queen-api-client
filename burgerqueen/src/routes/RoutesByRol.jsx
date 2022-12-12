@@ -4,8 +4,8 @@ import { Administration } from "./Administration";
 import { MenuOptions } from "./MenuOptions";
 import { OrderState } from  "./OrderState";
 import { OrderStateChef } from "./OrderStateChef";
-import { Products } from "./Products";
-import { Users } from "./Users";
+import { Products } from "./EditAdminProducts";
+import { Users } from "./EditAdminUsers";
 
 
 function RoutesByRole() {
