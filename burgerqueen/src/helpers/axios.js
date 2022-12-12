@@ -108,4 +108,3 @@ export const deleteOrderPending = async (orderId) => {
     });
     return res
 };
- 
